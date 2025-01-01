@@ -1,0 +1,217 @@
+/* General Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f7f7f7;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+/* Container for the entire app */
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  min-height: 100vh;
+  background-color: #f0f4f8;
+  transition: all 0.3s ease;
+}
+
+/* Title Styles */
+h1 {
+  color: #4CAF50;
+  font-size: 3rem;
+  margin-bottom: 20px;
+  text-align: center;
+  animation: fadeIn 2s ease-out;
+}
+
+/* Button Styles */
+button {
+  padding: 12px 25px;
+  font-size: 1.1rem;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Button Hover Effects */
+button:hover {
+  background-color: #45a049;
+  transform: scale(1.05);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+button:disabled {
+  background-color: #ddd;
+  cursor: not-allowed;
+}
+
+/* Input Field Styles */
+input[type='text'] {
+  padding: 12px;
+  font-size: 1rem;
+  border: 2px solid #ddd;
+  border-radius: 4px;
+  width: 250px;
+  margin-right: 10px;
+  transition: all 0.3s ease;
+}
+
+input[type='text']:focus {
+  border-color: #4CAF50;
+  outline: none;
+  transform: scale(1.02);
+}
+
+/* Category and Task List Styles */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  margin: 10px 0;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 6px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  opacity: 0;
+  animation: fadeInUp 0.5s forwards;
+}
+
+/* Hover effect for list items */
+ul li:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Category Page Styles */
+h2 {
+  color: #4CAF50;
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+input[type='checkbox'] {
+  margin-right: 15px;
+  transition: all 0.3s ease;
+}
+
+input[type='checkbox']:checked {
+  background-color: #4CAF50;
+}
+
+ul li {
+  background-color: #e4e4e4;
+  padding: 12px;
+  border-radius: 4px;
+  margin: 8px 0;
+}
+
+ul li input[type='checkbox'] {
+  margin-left: 10px;
+}
+
+/* Streak Section Styles */
+.streak-section {
+  background-color: #fff;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 600px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.streak-section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+.streak-section h3 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.streak-section p {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+  color: #555;
+}
+
+/* Streak Completed or Not-Completed Styles */
+.streak-section p.completed {
+  color: green;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.streak-section p.not-completed {
+  color: red;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+/* Animation Effects for Fading In */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Animation Effects for Fading In Task Items */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .App {
+    padding: 10px;
+  }
+
+  input[type='text'] {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  button {
+    width: 100%;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h3 {
+    font-size: 1.2rem;
+  }
+
+  ul li {
+    font-size: 1rem;
+  }
+
+  .streak-section {
+    width: 100%;
+    padding: 15px;
+  }
+}
